@@ -1,0 +1,64 @@
+.previous-searches {
+    display: block;
+}
+
+.previous-searches h2 {
+    color: var(--rich-dark-color);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.previous-searches-container .search-item {
+    background-color: var(--logo-color);
+    display: inline-block;
+    margin: 0 .75rem .75rem 0;
+    padding: .5rem 1rem;
+    color: var( --color-white);
+    border-radius: 30px;
+    box-shadow: 0 3px 6px var(--shadow-color);
+    opacity: 0;
+    animation: slideInRight .5s forwards;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    justify-content: end;
+}
+
+.search-box input, .btn {
+    height: 35px;
+}
+
+.search-box input {
+    min-width: 250px;
+    padding: 0 .5rem;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    border: 1px solid #4d4d4d;
+}
+
+.btn {
+    padding-block: 0;
+    padding-inline: .75rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.recipes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 50px;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

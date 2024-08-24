@@ -1,0 +1,49 @@
+.col img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.description {
+    padding-left: 1rem;
+}
+
+.list-item {
+    border-left: .2rem solid var(--logo-color);
+    margin-bottom: .5rem;
+    padding: .1rem 0 .1rem .3rem;
+    color: var(--rich-dark-color);
+    font-weight: bold;
+    font-size: smaller;
+    animation: .3s SlideInRight forwards;
+}
+
+ .col .btn-signup {
+    margin-top: 1rem;
+}
+
+.head {
+    text-transform: capitalize;
+    color: var(--main-color);
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-align: start;
+}
+
+@keyframes SlideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* FOR MOBILE AND SMALL SCREEN VIEWS IN PORTRAIT*/
+@media screen and (min-device-width: 344px) 
+    and (max-device-width: 640px) {
+        .improve-skills {
+            margin-top: 2rem;
+        }
+    }

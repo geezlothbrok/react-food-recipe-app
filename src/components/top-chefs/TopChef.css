@@ -1,0 +1,70 @@
+.chefs {
+    display: block;
+    margin-top: 20px;
+}
+
+.chefs-title {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.chef-card {
+    display: flex;
+    height: 120px;
+    background-color: var(--color-white) ;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.chef-card img {
+    height: 100%;
+    width: 120px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 3px 6px var(--shadow-color);
+}
+
+.top-chef-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr) );
+    gap: .8rem;
+}
+
+.chef-card-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: .3rem;
+    padding-left: .8rem;
+}
+
+.chef-card-name {
+    font-weight: bold;
+    font-size: medium;
+    color: var(--rich-dark-color);
+}
+
+.chef-recipe-count, .chef-cusine {
+    color: var(--light-text);
+    font-size: x-small;
+}
+
+.chef-icons svg {
+    margin-right: 7px;
+    font-size: 12px;
+}
+
+
+
+
+/* FOR MOBILE AND SMALL SCREEN VIEWS IN PORTRAIT*/
+@media screen and (min-device-width: 344px) 
+    and (max-device-width: 640px) {
+        .chef-card { 
+            box-shadow: 0 5px 10px var(--shadow-color);
+        }
+    }

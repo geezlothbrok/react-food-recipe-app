@@ -1,0 +1,48 @@
+.footer {
+    background-color: var(--main-color);
+    color: var(--light-color);
+    padding-block: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.footer-section p {
+    opacity: .8;
+    margin-bottom: .5rem;
+    font-size: x-small;
+}
+
+.footer-title {
+    opacity: 1;
+    font-weight: bold;
+    margin-bottom: .8rem;
+    font-size: medium !important;
+}
+
+.copy-right {
+    font-size: xx-small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--light-color);
+
+}
+
+
+/* FOR MOBILE AND SMALL SCREEN VIEWS IN PORTRAIT*/
+@media screen and (min-device-width: 344px) 
+    and (max-device-width: 640px) {
+        .footer {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .footer-section:nth-child(1) {
+            grid-column: span 4;
+        }
+
+        .footer-section:nth-child(2), .footer-section:nth-child(3) {
+            grid-column: span 2;
+        }
+    }

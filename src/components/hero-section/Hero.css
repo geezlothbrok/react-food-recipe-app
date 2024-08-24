@@ -1,0 +1,166 @@
+.section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3vw;
+}
+
+.section .col {
+    width: 50%;
+}
+
+.title {
+    color: var(--main-color);
+    font-size: 2.9rem;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.info {
+    color: var( --rich-dark-color);
+    font-size: .7rem;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+.typography {
+    margin-right: 1.5rem;
+}
+
+.btn {
+    outline: none;
+    background-color: var(--logo-color);
+    border: none;
+    color: var(--color-white);
+    padding: 5px 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 6px var(--shadow-color);
+    border-radius: 3px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.hero-image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .17rem;
+    object-fit: cover;
+    /* transform: scale(0.1); */
+    animation: 0.6s popOut forwards;
+    transform: scale(0);
+    opacity: 0;
+    overflow: hidden;
+}
+
+.hero-image img {
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    padding-top: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.hero-image:nth-child(2) {
+    animation-delay: .3s;
+}
+.hero-image:nth-child(3) {
+    animation-delay: .4s;
+}
+.hero-image:nth-child(6) {
+    animation-delay: .5s;
+}
+.hero-image:nth-child(9) {
+    animation-delay: .6s;
+}
+.hero-image:nth-child(8) {
+    animation-delay: .7s;
+}
+.hero-image:nth-child(7) {
+    animation-delay: .6s;
+}
+.hero-image:nth-child(4) {
+    animation-delay: .8s;
+}
+.hero-image:nth-child(5) {
+    animation-delay: .8s;
+}
+
+@keyframes popOut {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* FOR MOBILE AND SMALL SCREEN VIEWS IN PORTRAIT*/
+@media screen and (min-device-width: 344px) 
+    and (max-device-width: 640px) {
+        .section {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .section .col {
+            width: 100%;
+        }
+
+        .title {
+            color: var(--main-color);
+            font-size: 2rem;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+        }
+
+        .info {
+            color: var( --rich-dark-color);
+            font-size: .8rem;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            outline: none;
+            background-color: var(--logo-color);
+            border: none;
+            color: var(--color-white);
+            padding: 5px 10px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 3px 6px var(--shadow-color);
+            border-radius: 3px;
+           margin-bottom: 20px;
+        }
+
+        .hero-image img {
+            height: 105px;
+            width: 105px;
+            object-fit: cover;
+            padding-top: 3px;
+            border-radius: 3px;
+        }
+
+        .hero-image {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: .17rem;
+            object-fit: cover;
+            transform: scale(0.1);
+            animation: 0.6s popOut forwards;
+            transform: scale(0);
+            opacity: 0;
+        }
+    }
